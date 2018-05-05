@@ -9,11 +9,14 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    var data :detailData?
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+         setNavigation(title: "Detail", viewControlla: self)
+        print(data?.msg ?? "Not Found")
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

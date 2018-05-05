@@ -28,7 +28,11 @@ class imageCaptureController: UIViewController {
      openGallery()
     }
     @IBAction func DetailViewPushBtnAction(_ sender: Any) {
-        
+        let vc =  self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc.data?.imageData = imageData
+        vc.data?.screentype = screenType.Detail
+        vc.data?.msg = "Success"
+      navigationController?.pushViewController(vc, animated: true)
         
     }
     private func openGallery() {
@@ -54,7 +58,7 @@ class imageCaptureController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setNavigation(title: "VizBrain", viewControlla: self)
         // Do any additional setup after loading the view.
     }
   

@@ -115,7 +115,7 @@
         <!--Detail View Controller-->
         <scene sceneID="57O-yC-SgU">
             <objects>
-                <viewController id="D6z-23-bDf" customClass="DetailViewController" customModule="visBrain" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="D6z-23-bDf" customClass="DetailViewController" customModule="visBrain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvZ-Zp-gsp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

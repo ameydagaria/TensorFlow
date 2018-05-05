@@ -13,3 +13,9 @@ public enum UIImagePickerControllerSourceType : Int {
     case camera
     case savedPhotosAlbum
 }
+
+public enum screenType {
+    case Detail
+    case Home
+    case ImageViewController
+}

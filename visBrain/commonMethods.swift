@@ -7,4 +7,16 @@
 //
 
 import Foundation
+import UIKit
+    // Simple Navigation
+    public func setNavigation (title:String,viewControlla:UIViewController) {
+        let view = viewControlla.view
+        let screenSize: CGRect = UIScreen.main.bounds
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 44))
+        let navItem = UINavigationItem(title: title)
+        navBar.setItems([navItem], animated: false)
+        view?.addSubview(navBar)
+    }
+    
+    
 
