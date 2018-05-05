@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreML
+import Vision
 
 class imageCaptureController: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
@@ -75,6 +77,11 @@ extension imageCaptureController :UIImagePickerControllerDelegate,UINavigationCo
             print("Cant Find Image")
             return
         }
+        guard let ciimage = CIImage(image: image) else {
+            print("Image not found")
+            return
+        }
+        detectScene(image: ciimage)
         imageData = info
         imgView.image = image
     }
@@ -83,5 +90,35 @@ extension imageCaptureController :UIImagePickerControllerDelegate,UINavigationCo
             picker.dismiss(animated: true)
         }
         print("Did cancel")
+    }
+    func detectScene (image: CIImage) {
+        liveLbl.numberOfLines = 4
+        liveLbl.text = "Brain Is Working Wait for Output"
+        // Load the ML model through its generated class
+        guard let model = try? VNCoreMLModel(for:Inceptionv3().model) else {
+            fatalError("Can't load Inception ML model")
+        }
+        // Create a Vision request with completion handler
+        let request = VNCoreMLRequest(model: model) { [weak self] request, error in
+            guard let results = request.results as? [VNClassificationObservation],
+                let topResult = results.first else {
+                    fatalError("Unexpected result type from VNCoreMLRequest")
+            }
+            
+            // Update UI on main queue
+            DispatchQueue.main.async { [weak self] in
+                self?.liveLbl.text = "\(Int(topResult.confidence * 100))% it's \(topResult.identifier)"
+            }
+        }
+        
+        // Run the Core ML model classifier on global dispatch queue
+        let handler = VNImageRequestHandler(ciImage: image)
+        DispatchQueue.global(qos: .userInteractive).async {
+            do {
+                try handler.perform([request])
+            } catch {
+                print(error)
+            }
+        }
     }
 }

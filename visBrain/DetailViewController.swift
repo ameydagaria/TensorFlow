@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class DetailViewController: UIViewController {
     var data :detailData?
     override func viewDidLoad() {

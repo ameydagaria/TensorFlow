@@ -17,6 +17,7 @@
 		18C90B39209E04F7006C089D /* GlobalEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C90B38209E04F7006C089D /* GlobalEnums.swift */; };
 		18C90B3B209E133F006C089D /* commonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C90B3A209E133F006C089D /* commonMethods.swift */; };
 		18C90B3D209E1AE1006C089D /* CommonStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C90B3C209E1AE1006C089D /* CommonStruct.swift */; };
+		18C90B43209E2A2E006C089D /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 18C90B42209E2A2E006C089D /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		18C90B38209E04F7006C089D /* GlobalEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnums.swift; sourceTree = "<group>"; };
 		18C90B3A209E133F006C089D /* commonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commonMethods.swift; sourceTree = "<group>"; };
 		18C90B3C209E1AE1006C089D /* CommonStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStruct.swift; sourceTree = "<group>"; };
+		18C90B42209E2A2E006C089D /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		1838F391209524A200EA82FB /* visBrain */ = {
 			isa = PBXGroup;
 			children = (
+				18C90B42209E2A2E006C089D /* Inceptionv3.mlmodel */,
 				1838F392209524A200EA82FB /* AppDelegate.swift */,
 				1838F394209524A200EA82FB /* ViewController.swift */,
 				1838F396209524A200EA82FB /* Main.storyboard */,
@@ -155,6 +158,7 @@
 				18C90B3B209E133F006C089D /* commonMethods.swift in Sources */,
 				1838F3A52095289E00EA82FB /* imageCaptureController.swift in Sources */,
 				1838F393209524A200EA82FB /* AppDelegate.swift in Sources */,
+				18C90B43209E2A2E006C089D /* Inceptionv3.mlmodel in Sources */,
 				18C90B39209E04F7006C089D /* GlobalEnums.swift in Sources */,
 				1838F3A720952AFC00EA82FB /* DetailViewController.swift in Sources */,
 			);
