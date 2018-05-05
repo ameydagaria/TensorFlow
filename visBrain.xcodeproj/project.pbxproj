@@ -15,6 +15,7 @@
 		1838F3A52095289E00EA82FB /* imageCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1838F3A42095289E00EA82FB /* imageCaptureController.swift */; };
 		1838F3A720952AFC00EA82FB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1838F3A620952AFC00EA82FB /* DetailViewController.swift */; };
 		18C90B39209E04F7006C089D /* GlobalEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C90B38209E04F7006C089D /* GlobalEnums.swift */; };
+		18C90B3B209E133F006C089D /* commonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C90B3A209E133F006C089D /* commonMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1838F3A42095289E00EA82FB /* imageCaptureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCaptureController.swift; sourceTree = "<group>"; };
 		1838F3A620952AFC00EA82FB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		18C90B38209E04F7006C089D /* GlobalEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnums.swift; sourceTree = "<group>"; };
+		18C90B3A209E133F006C089D /* commonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commonMethods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				1838F396209524A200EA82FB /* Main.storyboard */,
 				1838F3A620952AFC00EA82FB /* DetailViewController.swift */,
 				1838F3A42095289E00EA82FB /* imageCaptureController.swift */,
+				18C90B3A209E133F006C089D /* commonMethods.swift */,
 				18C90B38209E04F7006C089D /* GlobalEnums.swift */,
 				1838F399209524A300EA82FB /* Assets.xcassets */,
 				1838F39B209524A300EA82FB /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1838F395209524A200EA82FB /* ViewController.swift in Sources */,
+				18C90B3B209E133F006C089D /* commonMethods.swift in Sources */,
 				1838F3A52095289E00EA82FB /* imageCaptureController.swift in Sources */,
 				1838F393209524A200EA82FB /* AppDelegate.swift in Sources */,
 				18C90B39209E04F7006C089D /* GlobalEnums.swift in Sources */,

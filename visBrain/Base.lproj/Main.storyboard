@@ -52,10 +52,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VnH-Kh-OZ1">
+                                <rect key="frame" x="72" y="114" width="250" height="213"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE7-K8-mc3">
                                 <rect key="frame" x="128" y="433" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Camera capture"/>
                                 <connections>
                                     <action selector="cameraAction:" destination="6uZ-zr-tHD" eventType="touchUpInside" id="TRE-5v-gwZ"/>
                                 </connections>
@@ -63,31 +67,44 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cK-gm-hiA">
                                 <rect key="frame" x="128" y="501" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Gallery"/>
                                 <connections>
                                     <action selector="galleryAction:" destination="6uZ-zr-tHD" eventType="touchUpInside" id="AKn-Y9-hQR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1W-uq-M2Z">
-                                <rect key="frame" x="164" y="386" width="46" height="30"/>
+                                <rect key="frame" x="172" y="386" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Live"/>
                                 <connections>
                                     <action selector="liveVisionAction:" destination="6uZ-zr-tHD" eventType="touchUpInside" id="d9X-cO-6a9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VnH-Kh-OZ1">
-                                <rect key="frame" x="72" y="114" width="250" height="213"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aec-xj-Ue9">
+                                <rect key="frame" x="72" y="357" width="250" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Q0-lX-hXs">
+                                <rect key="frame" x="69" y="596" width="237" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Detail View"/>
+                                <connections>
+                                    <action selector="DetailViewPushBtnAction:" destination="6uZ-zr-tHD" eventType="touchUpInside" id="Fju-WU-aE7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1vE-uo-83R"/>
                     </view>
                     <connections>
                         <outlet property="cameraBtn" destination="bE7-K8-mc3" id="6cf-nP-hN3"/>
+                        <outlet property="detailViewPushBtn" destination="2Q0-lX-hXs" id="4i8-TK-B1g"/>
                         <outlet property="galleryBtn" destination="1cK-gm-hiA" id="0ER-7Q-NlY"/>
                         <outlet property="imgView" destination="VnH-Kh-OZ1" id="faS-yf-jCy"/>
+                        <outlet property="liveLbl" destination="Aec-xj-Ue9" id="gk6-uX-81l"/>
                         <outlet property="liveVisionBtn" destination="p1W-uq-M2Z" id="oBw-O3-VRH"/>
                     </connections>
                 </viewController>
